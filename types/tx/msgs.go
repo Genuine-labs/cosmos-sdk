@@ -35,6 +35,7 @@ func GetMsgs(anys []*types.Any, name string) ([]sdk.Msg, error) {
 	for i, any := range anys {
 		cached := any.GetCachedValue()
 		if cached == nil {
+			fmt.Println("truoc panic in getmsag")
 			return nil, fmt.Errorf("any cached value is nil, %s messages must be correctly packed any values", name)
 		}
 		msgs[i] = cached.(sdk.Msg)

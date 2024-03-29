@@ -27,6 +27,7 @@ func (t *Tx) GetMsgs() []sdk.Msg {
 	anys := t.Body.Messages
 	res, err := GetMsgs(anys, "transaction")
 	if err != nil {
+		fmt.Println("o day co panic")
 		panic(err)
 	}
 	return res
