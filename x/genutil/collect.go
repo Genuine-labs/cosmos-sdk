@@ -115,7 +115,7 @@ func CollectTxs(cdc codec.JSONCodec, txJSONDecoder sdk.TxDecoder, moniker, genTx
 		if err != nil {
 			return appGenTxs, persistentPeers, err
 		}
-		fmt.Println("dontttttttlllllll")
+		fmt.Println("kkkkkk333")
 
 		appGenTxs = append(appGenTxs, genTx)
 
