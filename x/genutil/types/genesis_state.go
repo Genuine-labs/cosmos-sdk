@@ -116,7 +116,7 @@ func DefaultMessageValidator(msgs []sdk.Msg) error {
 	if err := msgs[0].ValidateBasic(); err != nil {
 		return fmt.Errorf("invalid GenTx '%s': %w", msgs[0], err)
 	}
-
+	fmt.Println("nilllllllll")
 	return nil
 }
 
