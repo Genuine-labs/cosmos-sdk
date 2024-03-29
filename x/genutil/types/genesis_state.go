@@ -126,6 +126,6 @@ func ValidateAndGetGenTx(genTx json.RawMessage, txJSONDecoder sdk.TxDecoder, val
 	if err != nil {
 		return tx, fmt.Errorf("failed to decode gentx: %s, error: %s", genTx, err)
 	}
-
+	fmt.Println("checks: ", tx.GetMsgs())
 	return tx, validator(tx.GetMsgs())
 }

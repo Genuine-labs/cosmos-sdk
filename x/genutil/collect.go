@@ -104,13 +104,13 @@ func CollectTxs(cdc codec.JSONCodec, txJSONDecoder sdk.TxDecoder, moniker, genTx
 		if !strings.HasSuffix(fo.Name(), ".json") {
 			continue
 		}
-
+		fmt.Println("kkkkkk1")
 		// get the genTx
 		jsonRawTx, err := os.ReadFile(filepath.Join(genTxsDir, fo.Name()))
 		if err != nil {
 			return appGenTxs, persistentPeers, err
 		}
-
+		fmt.Println("kkkkkk")
 		genTx, err := types.ValidateAndGetGenTx(jsonRawTx, txJSONDecoder, validator)
 		if err != nil {
 			return appGenTxs, persistentPeers, err
