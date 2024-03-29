@@ -112,6 +112,7 @@ func ValidateAndGetGenTx(genTx json.RawMessage, txJSONDecoder sdk.TxDecoder) (sd
 	}
 
 	msgs := tx.GetMsgs()
+	fmt.Println("checksssss:", msgs)
 	if len(msgs) != 1 {
 		return tx, fmt.Errorf("unexpected number of GenTx messages; got: %d, expected: 1", len(msgs))
 	}
